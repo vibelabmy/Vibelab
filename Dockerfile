@@ -30,18 +30,17 @@ RUN apk add --no-cache \
     libzip-dev \
     oniguruma-dev \
     pkgconf \
-    sqlite-dev \
+    postgresql-dev \
     && docker-php-ext-install \
         bcmath \
         intl \
         mbstring \
         pdo \
-        pdo_sqlite
+        pdo_pgsql
 
 COPY . .
 COPY --from=vendor /app/vendor ./vendor
 COPY --from=frontend /app/public/build ./public/build
-
 RUN mkdir -p database storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache \
     && touch database/database.sqlite \
     && chown -R www-data:www-data storage bootstrap/cache database \
@@ -50,3 +49,4 @@ RUN mkdir -p database storage/framework/cache storage/framework/sessions storage
 EXPOSE 8000
 
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+
