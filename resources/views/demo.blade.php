@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ __('Demo') }} - {{ config('app.name', 'Laravel') }}</title>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-        <main class="min-h-screen px-4 py-12">
-            <div class="mx-auto w-full max-w-3xl">
-                <h1 class="mb-6 text-2xl font-semibold">{{ __('Demo') }}</h1>
-                <x-demo />
-            </div>
-        </main>
-    </body>
-</html>
+@extends('layouts.master')
+
+@section('content')
+    <section class="mx-auto w-full max-w-[1280px] px-8 py-16 lg:px-14">
+        <h1 class="text-4xl font-semibold tracking-wide text-zinc-900">Demo Landing</h1>
+        <p class="mt-3 max-w-2xl text-lg text-zinc-700">
+            Guna butang bawah untuk buka setiap halaman yang sudah dibuat.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+            <a href="{{ route('demo') }}" class="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-zinc-800">
+                Utama
+            </a>
+            <a href="{{ route('pakej') }}" class="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-zinc-800">
+                Pakej
+            </a>
+            <a href="{{ route('demo') }}" class="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-zinc-800">
+                Menu
+            </a>
+            <a href="{{ route('tentang_kami') }}" class="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-zinc-800">
+                Tentang Kami
+            </a>
+            <a href="{{ route('hubungi_kami') }}" class="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-zinc-800">
+                Hubungi Kami
+            </a>
+        </div>
+    </section>
+@endsection
