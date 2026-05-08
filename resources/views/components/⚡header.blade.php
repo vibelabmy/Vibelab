@@ -9,7 +9,7 @@ new class extends Component
         return [
             ['label' => 'Utama', 'route' => 'demo'],
             ['label' => 'Pakej', 'route' => 'pakej'],
-            ['label' => 'Menu', 'route' => 'demo'],
+            ['label' => 'Menu', 'route' => 'menu'],
             ['label' => 'Tentang Kami', 'route' => 'tentang_kami'],
             ['label' => 'Hubungi Kami', 'route' => 'hubungi_kami'],
         ];
