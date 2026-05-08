@@ -20,7 +20,7 @@
             <a href="{{ route('pakej') }}" class="transition-colors hover:text-zinc-950">
                 Pakej
             </a>
-            <a href="{{ route('demo') }}" class="transition-colors hover:text-zinc-950">
+            <a href="{{ route('menu') }}" class="transition-colors hover:text-zinc-950">
                 Menu
             </a>
             <a href="{{ route('tentang_kami') }}" class="transition-colors hover:text-zinc-950">
