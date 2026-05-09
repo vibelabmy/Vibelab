@@ -34,8 +34,22 @@ new class extends Component
 
         <nav class="flex items-center gap-8 text-[14px] uppercase tracking-wide text-zinc-700">
             @foreach ($this->links() as $link)
-                <a href="{{ route($link['route']) }}" class="transition-colors hover:text-zinc-950">
+                <a
+                    href="{{ route($link['route']) }}"
+                    @class([
+                        'group relative pb-1 transition-colors duration-200',
+                        'text-zinc-950 font-semibold' => request()->routeIs($link['route']),
+                        'text-zinc-700 hover:text-zinc-950' => ! request()->routeIs($link['route']),
+                    ])
+                >
                     {{ $link['label'] }}
+                    <span
+                        @class([
+                            'absolute -bottom-0.5 left-0 h-0.5 w-full origin-left bg-zinc-900 transition-transform duration-300',
+                            'scale-x-100' => request()->routeIs($link['route']),
+                            'scale-x-0 group-hover:scale-x-100' => ! request()->routeIs($link['route']),
+                        ])
+                    ></span>
                 </a>
             @endforeach
         </nav>
