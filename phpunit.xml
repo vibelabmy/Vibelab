@@ -32,5 +32,15 @@
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>
+        <env name="BIRTHDAY_NAME" value="Madiha"/>
+        <env name="BIRTHDAY_EMAIL" value="madiha@vibelab.test"/>
+        <env name="BIRTHDAY_PASSWORD" value="2091999"/>
+        <env name="BIRTHDAY_FROM" value="With all my love"/>
+        <env name="BIRTHDAY_GREETING" value="For u, Sayang Manja"/>
+        <env name="BIRTHDAY_TITLE" value="Happy Birthday"/>
+        <env name="BIRTHDAY_SONG_TITLE" value="Sampai Jadi Debu"/>
+        <env name="BIRTHDAY_SONG_ARTIST" value="Banda Neira"/>
+        <env name="BIRTHDAY_SONG_YOUTUBE_ID" value="JjFeJ608VKc"/>
+        <env name="BIRTHDAY_SONG_START_SECONDS" value="170"/>
     </php>
 </phpunit>

@@ -16,7 +16,7 @@
                    class="inline-flex items-center gap-2 rounded-full bg-amber-900 px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-amber-950">
                     Lihat Pakej <span class="text-base font-light">›</span>
                 </a>
-                <a href="https://wa.me/60197731908?text=Saya%20nak%20tanya%20pakej%20catering"
+                <a href="{{ \App\Support\WhatsAppUrl::buildEnquiryUrl() }}"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="inline-flex items-center gap-2 rounded-full border-2 border-orange-600 px-5 py-2.5 text-sm font-semibold text-orange-600 transition hover:bg-orange-600 hover:text-white">
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 divide-y divide-stone-100 border-t border-stone-100 bg-stone-50 dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-900 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+    <div id="pakej" class="scroll-mt-28 grid grid-cols-1 divide-y divide-stone-100 border-t border-stone-100 bg-stone-50 dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-900 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
 
         @foreach ([
             ['icon' => 'M12 3C6.48 3 2 7.48 2 13h2c0-4.42 3.58-8 8-8s8 3.58 8 8h2c0-5.52-4.48-10-10-10zm0 4c-3.31 0-6 2.69-6 6h2c0-2.21 1.79-4 4-4s4 1.79 4 4h2c0-3.31-2.69-6-6-6zm1 6h-2v2l-3 3 1.41 1.41L12 16.83l2.59 2.58L16 18l-3-3v-2z', 'title' => 'Kualiti Terbaik', 'desc' => 'Menggunakan bahan segar dan resipi turun temurun untuk rasa yang enak'],

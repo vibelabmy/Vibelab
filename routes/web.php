@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BirthdayController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,5 +47,17 @@ Route::middleware('auth')->group(function () {
 Route::get('/demo2', function () {
     return view('demo2');
 })->name('demo2');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/untukmu', [BirthdayController::class, 'create'])->name('birthday.login');
+    Route::post('/untukmu', [BirthdayController::class, 'store'])
+        ->middleware('throttle:5,1')
+        ->name('birthday.login.store');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/untukmu/kad', [BirthdayController::class, 'show'])->name('birthday.card');
+    Route::post('/untukmu/logout', [BirthdayController::class, 'destroy'])->name('birthday.logout');
+});
 
 require __DIR__.'/auth.php';

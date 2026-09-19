@@ -17,9 +17,9 @@ new class extends Component
 };
 ?>
 
-<header class="border-b border-zinc-200 bg-[#f5f5f5]">
+<header data-page-transition-nav class="border-b border-zinc-200 bg-[#f5f5f5]">
     <div class="mx-auto flex h-[84px] w-full max-w-[1280px] items-center justify-between gap-6 px-8 lg:px-14">
-        <a href="{{ route('demo') }}" class="group flex items-center gap-3">
+        <a href="{{ route('demo') }}" class="group flex items-center gap-3 transition-transform duration-200 ease-out hover:opacity-95 active:scale-[0.99]">
             <div class="flex h-[56px] w-[120px] items-center justify-center rounded border border-dashed border-zinc-400 bg-white text-[10px] font-semibold uppercase tracking-[0.14em] text-zinc-500">
                 Logo
             </div>
@@ -37,7 +37,7 @@ new class extends Component
                 <a
                     href="{{ route($link['route']) }}"
                     @class([
-                        'group relative pb-1 transition-colors duration-200',
+                        'group relative pb-1 transition-all duration-300 ease-out motion-reduce:transition-none',
                         'text-zinc-950 font-semibold' => request()->routeIs($link['route']),
                         'text-zinc-700 hover:text-zinc-950' => ! request()->routeIs($link['route']),
                     ])

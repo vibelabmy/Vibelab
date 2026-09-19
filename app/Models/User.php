@@ -17,6 +17,11 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
+    public function isBirthdayRecipient(): bool
+    {
+        return strcasecmp($this->email, (string) config('birthday.email')) === 0;
+    }
+
     /**
      * Get the attributes that should be cast.
      *
