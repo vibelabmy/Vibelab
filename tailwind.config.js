@@ -13,6 +13,8 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                serif: ['"Cormorant Garamond"', 'Georgia', ...defaultTheme.fontFamily.serif],
+                script: ['"Great Vibes"', 'cursive'],
             },
         },
     },

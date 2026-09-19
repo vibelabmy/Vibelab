@@ -116,3 +116,9 @@ new class extends Component
         @endforeach
     </div>
 </section>
+
+<footer class="border-t border-zinc-200 bg-[#f5f5f5]">
+    <div class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-8 py-3 text-xs text-zinc-500 lg:px-14">
+        <p>Enyfadz Enterprise | {{ date('Y') }}</p>
+    </div>
+</footer>

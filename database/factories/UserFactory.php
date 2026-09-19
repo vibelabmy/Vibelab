@@ -42,4 +42,16 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * The girlfriend-only birthday letter account.
+     */
+    public function birthdayRecipient(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'name' => config('birthday.name'),
+            'email' => config('birthday.email'),
+            'password' => config('birthday.password'),
+        ]);
+    }
 }

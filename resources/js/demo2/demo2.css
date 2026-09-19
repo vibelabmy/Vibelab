@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+.demo2-vue-page {
+    margin: 0;
+    padding: 0;
+}
+
+.demo2-vue-page *,
+.demo2-vue-page *::before,
+.demo2-vue-page *::after {
+    box-sizing: border-box;
+}
+
+#demo2-app {
+    --orange: #c85a1a;
+    --orange-light: #e8784a;
+    --orange-pale: #fdf0e8;
+    --gold: #b8922a;
+    --dark: #1a1208;
+    --mid: #4a3520;
+    --cream: #faf7f2;
+    --white: #ffffff;
+    --border: rgba(200, 90, 26, 0.15);
+
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Scroll animation utility */
+#demo2-app .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#demo2-app .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
